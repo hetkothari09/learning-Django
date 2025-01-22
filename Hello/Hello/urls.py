@@ -16,8 +16,13 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
+
+    # indicates if a user comes with url admin/ then redirect him to django admin website
     path("admin/", admin.site.urls),
+
+    # indicates if user comes with a blank path/url then redirect it to home(app) urls.py file
+    path("", include("home.urls")),
 ]

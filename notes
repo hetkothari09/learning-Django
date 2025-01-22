@@ -11,4 +11,20 @@ DJANGO
     colors, style - CSS
     Engine, parts - JAVASCRIPT
 
-4.
+4. All commands:
+    to create a project - django-admin startproject PROJECTNAME
+    to start the server - python manage.py runserver (after coming in the project directory)
+    to create an app - python manage.py startapp APPNAME (out of the project directory)
+
+5. Steps:
+    run all the commands
+    create urls.py file in the app directory
+    copy the code from project's urls.py to app's urls.py
+    refactor all the url paths and their specific destination websites
+    create static and templates folder
+
+6. To serve your static folder files when user comes through static/ path add the         below code to settings.py in the project app's directory.
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
