@@ -15,12 +15,12 @@ def index(request):
 
 
 def about(request):
-    return HttpResponse("This is a sample about page")
+    return render(request, 'about.html')
 
 
 def services(request):
-    return HttpResponse("This is a sample services page")
+    return render(request, 'services.html')
 
 
 def contact(request):
-    return HttpResponse("This is a sample contact page")
+    return render(request, 'contact.html')

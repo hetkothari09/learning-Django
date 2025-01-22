@@ -18,6 +18,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+admin.site.site_header = "Het's Admin site"
+admin.site.site_title = "Het's Desserts Admin Portal"
+admin.site.index_title = "Welcome to Het's Desserts!"
+
 urlpatterns = [
 
     # indicates if a user comes with url admin/ then redirect him to django admin website

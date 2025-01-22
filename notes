@@ -28,3 +28,37 @@ DJANGO
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
+
+7. command - python manage.py mnakemigrations 
+This command is used to check if you have made any changes to the schema of the present database.
+
+8. command - python manage.py migrate
+This command helps us in creating default Django tables in the database.
+These default tables include the one used for authentication. Django has inbuilt authentication system. 
+
+9. You can visit the Django admin website by : localhost(port)/admin (eg. 127.0.0.1:8000/admin)
+
+10. command - python manage.py createsuperuser
+You can create super user with this command. A super user is a user with all the privileges.
+
+11. The details filled while creating a super-user, is automatically fed into the database. Django handles this.
+
+12. To change the text of the admin website you can use the below code, paste this code in project's urls.py:
+	admin.site.site_header = XYZ
+	admin.site.site_title = XYZ
+	admin.site.index_title = XYZ
+
+13. You can inherit templates into different templates which makes the work easier if you need to make any changes later on. You have to use the 'block' tags in the places you want to inherit.
+
+eg: {% block body %}
+    {% endblock body %}    <---- the place needing inherited text
+
+
+
+    {% extends "XYZ.html" %} 
+
+    {% block body %}
+	This is a body text
+    {% endblock body %}    <----- The place that sends the inherited text to the first file
+
+
