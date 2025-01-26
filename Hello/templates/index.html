@@ -5,7 +5,92 @@ Home
 {% endblock title %}
 
 
+
 {% block body %}
-  This is my home block body
+
+<!-- Image Slider -->
+<div class="container-fluid p-0 m-0">
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="static/img/img1.jpg" class="d-block w-100" alt="..." style="height: 35rem; object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block" style="background-color: black; border-radius: 2rem; margin: -1rem;">
+          <h5>Sweet Scoops of Happiness – Ice Cream That Warms Your Heart!</h5>
+          <p>Experience the joy of every bite with our creamy, irresistible ice creams made from the finest ingredients.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="static/img/img2.jpg" class="d-block w-100" alt="..." style="height: 35rem; object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block" style="background-color: black; border-radius: 2rem; margin: -1rem;">
+          <h5>Golden Delights – Waffles to Satisfy Every Craving!</h5>
+          <p>Indulge in the crispy, fluffy perfection of our waffles, made fresh to deliver a warm and delicious treat every time.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="static/img/img3.jpeg" class="d-block w-100" alt="..." style="height: 35rem; object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block" style="background-color: black; border-radius: 2rem; margin: -1rem;">
+          <h5>Fluffy Bliss – Pancakes That Melt in Your Mouth!</h5>
+          <p>Savor the soft, pillowy goodness of our pancakes, made fresh for a deliciously comforting treat with every bite.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+
+<!--Card container-->
+<h3 style="text-align: center; margin-top: 20px; margin-bottom: -10px;">Select from our wide range of desserts</h3>
+<div class="container mt-4">
+  <div class="card-group">
+    <div class="card">
+      <img src="static/img/img1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Ice-creams!</h5>
+        <p class="card-text">Various fresh ice-creams!</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="static/img/img2.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Waffles!</h5>
+        <p class="card-text">Hot and fresh chocolaty waffles!</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="static/img/img3.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Pancakes</h5>
+        <p class="card-text">Fresh pancakes available!</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
 {% endblock body %}
 

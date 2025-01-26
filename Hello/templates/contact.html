@@ -4,8 +4,59 @@
 Contact Us
 {% endblock title %}
 
-
 {% block body %}
-  This is my contact us block body
+
+<!-- Added a wrapper container to apply flexbox -->
+<div class="d-flex align-items-center" style="height: 80vh;">
+
+  <!-- Left container for the image -->
+  <div class="left-container" style="flex: 1; display: flex; justify-content: center;">
+    <img src="/static/img/contactus.jpeg" alt="Contact Us" style="height: 30rem; width: 35rem; margin-top: 2.4rem;">
+  </div>
+
+  <!-- Right container for the form -->
+  <div class="right-container" style="flex: 1; padding: 2rem;">
+    <form class="row g-3" method="post" action="/contact/">
+      {% csrf_token %}
+      <div class="col-md-6">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name">
+      </div>
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email">
+      </div>
+      <div class="col-12">
+        <label for="pnumber" class="form-label">Phone number</label>
+        <input type="number" class="form-control" id="pnumber" placeholder="" name="pnumber">
+      </div>
+      <div class="col-12">
+        <label for="issue" class="form-label">Reason for Contact</label>
+        <input type="text" class="form-control" id="issue" placeholder="" name="issue">
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">City</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div>
+<!--      <div class="col-12">-->
+<!--        <div class="form-check">-->
+<!--          <input class="form-check-input" type="checkbox" id="gridCheck">-->
+<!--          <label class="form-check-label" for="gridCheck">-->
+<!--            Check me out-->
+<!--          </label>-->
+<!--        </div>-->
+<!--      </div>-->
+      <div class="col-12" style="">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+
+</div>
+
 {% endblock body %}
 
