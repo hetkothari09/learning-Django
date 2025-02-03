@@ -8,3 +8,6 @@ class Contact(models.Model):
     desc = models.TextField()
     city = models.CharField(max_length=30)
     zipcode = models.IntegerField()
+
+    def __str__(self):
+        return self.name

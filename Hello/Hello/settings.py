@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os.path
 from pathlib import Path
+from django.contrib.messages import constants as messages
 
 # from django.conf.global_settings import STATICFILES_DIRS
 
