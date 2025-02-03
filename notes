@@ -62,3 +62,33 @@ eg: {% block body %}
     {% endblock body %}    <----- The place that sends the inherited text to the first file
 
 
+14. When you want to submit a form in your website you need to include a CSRF token in the code. Django has an inbuilt mechanism to prevent malicious attacks. Each user session has a unique CSRF token generated, thus when submitting the server checks and verifies the token received.
+
+code : {% csrf_token %}
+
+
+15. A MODEL in Django is an interface between application and the database which defines the structure of the database and provides methods for interacting with the data. Basically its like creating a table in the database.
+
+
+16. After defining your table in models.py, you need to run the command "python manage.py makemigrations". This command asks Django to create a file for all the changes made.
+
+17. Before running this command, you need to make a few changes, 
+	a. In admin.py you need to register your new model (eg. contact), so that you 	can view the model from your admin site. 
+	[[[ from xyz.models import MODELNAME
+	admin.site.register(MODELNAME) ]]]
+
+	b. From apps.py, copy the name of your app and paste it in settings.py -> 	installed apps section.
+	[[[   PROJECTAPPNAME.apps.COPIEDNAME   ]]]
+
+18. After making these changes run the command "python manage.py makemigrations". This will generate a migration file consisting all the changes. Still there has been no change made in the database.
+
+19. After running the above command, run "python manage.py migrate". This command will  finally create the table in the database. And now you can also view the database in your admin site as well.
+
+20. for flash messages on submit, etc.: 
+from django.contrib.messages import constants as messages -- in settings.py file
+from django.contrib import messages -- in views.py
+then you can use: messages.success(request, "MESSAGE")
+		  messages.error, etc.
+
+
+
